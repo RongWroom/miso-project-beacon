@@ -7,7 +7,7 @@ import AboutSection from '@/components/about-section'
 import ProjectsSection from '@/components/projects-section'
 import ContactSection from '@/components/contact-section'
 import Footer from '@/components/footer'
-import '@fontsource-variable/plus-jakarta-sans'
+// Remove duplicate font import as it's already in main.tsx
 
 const Index = () => {
   // Enable smooth scrolling
