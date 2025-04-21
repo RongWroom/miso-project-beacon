@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-[#e9eee9]">
+    <section id="contact" className="py-24 relative overflow-hidden bg-[#e9eee9] grid-pattern">
       {/* Flowing accent shapes */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute top-0 right-0 w-32 h-32 bg-miso-yellow rounded-xl opacity-10 rotate-12" />

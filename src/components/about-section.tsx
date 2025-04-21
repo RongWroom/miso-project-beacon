@@ -2,7 +2,7 @@ import { Card, CardContent } from "./ui/card";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-24 relative overflow-hidden bg-[#e9eee9]">
+    <section id="about" className="py-24 relative overflow-hidden bg-[#e9eee9] grid-pattern">
       {/* Flowing accent shapes */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute top-0 left-1/3 w-32 h-32 bg-miso-yellow rounded-xl opacity-10 rotate-12" />

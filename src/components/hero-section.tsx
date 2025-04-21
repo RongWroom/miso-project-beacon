@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="pt-32 pb-20 min-h-screen flex items-center relative overflow-hidden bg-[#e9eee9]">
+    <section id="home" className="pt-32 pb-20 min-h-screen flex items-center relative overflow-hidden bg-[#e9eee9] grid-pattern">
       {/* Accent geometric shapes */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute top-12 left-8 w-16 h-16 bg-miso-yellow rounded-lg opacity-20 rotate-12" />

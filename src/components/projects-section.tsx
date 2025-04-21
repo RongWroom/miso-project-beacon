@@ -24,7 +24,7 @@ const projects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 relative overflow-hidden bg-[#f5f8f6]">
+    <section id="projects" className="py-24 relative overflow-hidden bg-[#e9eee9] grid-pattern">
       {/* Flowing accent shapes */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-miso-yellow rounded-xl opacity-10 rotate-12" />
