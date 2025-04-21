@@ -45,7 +45,7 @@ export const Navbar = () => {
           <span 
             className="text-xl font-bold tracking-tight"
           >
-            MISO ANALYTICS
+            MISO
           </span>
         </a>
         

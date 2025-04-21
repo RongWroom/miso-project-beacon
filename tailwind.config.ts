@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 
 import type { Config } from "tailwindcss";
 
@@ -63,7 +64,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-                // MISO ANALYTICS custom colors
+                // MISO custom colors
                 miso: {
                     yellow: '#ffc700',
                     red: '#c70039',

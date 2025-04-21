@@ -58,7 +58,7 @@ export const HeroSection = () => {
                   <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-6 bg-miso-yellow/30 rounded-full blur-sm" />
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-28 h-8 bg-miso-red/20 rounded-full blur-md" />
                   <div className="relative z-10 w-40 h-56 bg-gradient-to-tr from-miso-platinum via-white to-miso-yellow rounded-2xl shadow-2xl flex items-center justify-center border border-miso-platinum">
-                    <span className="font-extrabold text-3xl text-miso-black/70 tracking-widest rotate-12">RIDGED</span>
+                    <span className="font-extrabold text-3xl text-miso-black/70 tracking-widest rotate-12">MISO</span>
                   </div>
                 </div>
                 {/* Accent floating shapes */}

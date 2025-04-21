@@ -32,7 +32,7 @@ export const AboutSection = () => {
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-miso-black">Taking Projects from Idea to Reality</h2>
             <p className="text-lg mb-6 text-miso-black/70">
-              At MISO ANALYTICS, we specialize in helping individuals and small businesses 
+              At MISO, we specialize in helping individuals and small businesses 
               navigate the complex journey from concept to successful execution.
             </p>
             <p className="text-lg mb-8 text-miso-black/70">
