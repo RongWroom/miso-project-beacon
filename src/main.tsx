@@ -2,7 +2,6 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-// Import the variable font weight CSS explicitly to fix resolution error
-import '@fontsource-variable/plus-jakarta-sans'
+// (Font import removed as font is now loaded via Google Fonts in index.html)
 
 createRoot(document.getElementById("root")!).render(<App />);
