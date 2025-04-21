@@ -1,4 +1,3 @@
-import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 
 const services = [
@@ -6,25 +5,21 @@ const services = [
     title: "Project Management",
     description:
       "Develop clear project plans, timelines, and workflows to keep your ideas on track.",
-    icon: "📊",
   },
   {
     title: "Consulting for Social Impact",
     description:
       "Strategic guidance tailored to projects that drive positive change in communities.",
-    icon: "🌱",
   },
   {
     title: "Risk Assessment",
     description:
       "Identify potential risks early and create practical strategies to manage them effectively.",
-    icon: "🛡️",
   },
   {
     title: "Project Tools Setup",
     description:
       "Help you implement and optimise tools like Trello and Google Workspace to streamline project management.",
-    icon: "🔧",
   },
 ];
 
@@ -47,17 +42,20 @@ export const ServiceSection = () => {
             We offer comprehensive services designed to help you manage your projects efficiently and achieve meaningful, real-world results.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto mb-16 animate-slide-up">
+        {/* Notion-inspired, but with subtle accents and two-column layout on desktop */}
+        <div className="max-w-4xl mx-auto mb-16 animate-slide-up grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, idx) => (
-            <Card key={service.title} className="rounded-2xl shadow-md bg-white/90 backdrop-blur-sm border-0">
-              <CardContent className="flex flex-col md:flex-row items-center gap-6 py-8 px-6">
-                <div className="flex-shrink-0 text-4xl md:text-5xl">{service.icon}</div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-miso-black">{service.title}</h3>
-                  <p className="text-miso-black/70 text-base">{service.description}</p>
-                </div>
-              </CardContent>
-            </Card>
+            <div
+              key={service.title}
+              className="flex items-start gap-4 bg-white/90 border-l-4 border-miso-yellow rounded-lg shadow-sm p-6 transition hover:shadow-md hover:bg-white"
+            >
+              {/* Minimalist colored dot icon */}
+              <span className="mt-1 w-3 h-3 rounded-full bg-miso-yellow flex-shrink-0"></span>
+              <div>
+                <h3 className="text-xl font-semibold mb-1 text-miso-black">{service.title}</h3>
+                <p className="text-miso-black/70 text-base leading-relaxed">{service.description}</p>
+              </div>
+            </div>
           ))}
         </div>
         <div className="text-center animate-slide-up">

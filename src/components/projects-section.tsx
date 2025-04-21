@@ -41,23 +41,26 @@ export const ProjectsSection = () => {
             We've helped numerous clients achieve success with their projects. Here are some examples of our recent work.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Notion-inspired, three-column layout */}
+        <div className="max-w-6xl mx-auto mb-16 animate-slide-up grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card
+            <div
               key={index}
-              className={`rounded-2xl shadow-md ${project.color} bg-white/90 backdrop-blur-sm border-0 animate-slide-up`}
+              className={`flex items-start gap-4 bg-white/90 border-l-4 rounded-lg shadow-sm p-6 transition hover:shadow-md hover:bg-white ${project.color}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="flex flex-col h-full py-8 px-6">
-                <div className="mb-6">
-                  <span className="inline-block bg-white px-3 py-1 rounded-full text-sm shadow-sm text-miso-black/80">
-                    {project.category}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-miso-black">{project.title}</h3>
-                <p className="text-miso-black/70 mb-6 flex-grow">{project.description}</p>
-              </CardContent>
-            </Card>
+              {/* Minimalist colored dot icon, except for Community Garden Planning */}
+              {project.title !== "Community Garden Planning" && (
+                <span className={`mt-1 w-3 h-3 rounded-full flex-shrink-0 ${project.color.replace('bg-', 'bg-').replace('/20', '/80').replace('/30', '/80').replace('/10', '/80')}`}></span>
+              )}
+              <div>
+                <span className="inline-block bg-miso-yellow/80 px-3 py-1 rounded-full text-xs font-semibold shadow-sm text-miso-black mb-2">
+                  {project.category}
+                </span>
+                <h3 className="text-xl font-semibold mb-1 text-miso-black">{project.title}</h3>
+                <p className="text-miso-black/70 text-base leading-relaxed">{project.description}</p>
+              </div>
+            </div>
           ))}
         </div>
         <div className="text-center mt-16 animate-slide-up">
