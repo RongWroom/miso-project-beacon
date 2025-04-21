@@ -1,5 +1,5 @@
-
-import { ButtonClay } from "./ui/button-clay";
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
 
 const services = [
   {
@@ -30,48 +30,38 @@ const services = [
 
 export const ServiceSection = () => {
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-miso-yellow rounded-full opacity-10 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-miso-platinum rounded-full opacity-20 blur-3xl" />
+    <section id="services" className="py-24 relative overflow-hidden bg-[#f5f8f6]">
+      {/* Flowing accent shapes */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-32 h-32 bg-miso-yellow rounded-xl opacity-10 rotate-12" />
+        <div className="absolute bottom-0 right-1/4 w-48 h-12 bg-miso-platinum rounded-full opacity-20 rotate-6" />
       </div>
-
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="animate-slide-up">
-            <div className="flex items-center justify-center mb-6">
-              <div className="h-1 w-12 bg-miso-yellow mr-4" />
-              <span className="text-miso-black/70 uppercase tracking-widest text-sm font-medium">
-                Our Services
-              </span>
-              <div className="h-1 w-12 bg-miso-yellow ml-4" />
-            </div>
-
-            <h2 className="section-title">How We Can Help You</h2>
-            <p className="section-subtitle">
-              We offer comprehensive services designed to help you manage your projects efficiently 
-              and achieve meaningful, real-world results.
-            </p>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
+          <span className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-miso-yellow/20 text-miso-black/70 uppercase tracking-widest text-xs font-semibold shadow-sm">
+            <svg width={20} height={20} fill="none" viewBox="0 0 24 24"><circle cx={12} cy={12} r={10} fill="#ffe066"/></svg>
+            Our Services
+          </span>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-miso-black">How We Can Help You</h2>
+          <p className="text-lg text-miso-black/70 mb-2">
+            We offer comprehensive services designed to help you manage your projects efficiently and achieve meaningful, real-world results.
+          </p>
         </div>
-
-        <ol className="max-w-2xl mx-auto space-y-10 text-left mb-16 animate-slide-up">
+        <div className="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto mb-16 animate-slide-up">
           {services.map((service, idx) => (
-            <li key={service.title} className="flex items-start gap-4">
-              {/* Icon can be omitted or made small since it's text based */}
-              <span className="mt-1 text-2xl" aria-hidden="true">{service.icon}</span>
-              <div>
-                <h3 className="font-semibold text-xl mb-1">{service.title}</h3>
-                <p className="text-miso-black/80">{service.description}</p>
-              </div>
-            </li>
+            <Card key={service.title} className="rounded-2xl shadow-md bg-white/90 backdrop-blur-sm border-0">
+              <CardContent className="flex flex-col md:flex-row items-center gap-6 py-8 px-6">
+                <div className="flex-shrink-0 text-4xl md:text-5xl">{service.icon}</div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-miso-black">{service.title}</h3>
+                  <p className="text-miso-black/70 text-base">{service.description}</p>
+                </div>
+              </CardContent>
+            </Card>
           ))}
-        </ol>
-
-        <div className="text-center animate-slide-up" style={{ animationDelay: "0.6s" }}>
-          <ButtonClay variant="primary" size="lg">
-            View All Services
-          </ButtonClay>
+        </div>
+        <div className="text-center animate-slide-up">
+          <Button size="lg" className="shadow-lg">See All Services</Button>
         </div>
       </div>
     </section>
